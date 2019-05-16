@@ -1,0 +1,14 @@
+{
+  "name": "data-structures",
+  "version": "0.0.1",
+  "description": "A collection data structures implemented in JavaScript",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "24.1.0"
+  },
+  "author": "Dylan Westerhold"
+}
