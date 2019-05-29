@@ -1,4 +1,4 @@
-const { SinglyLinkedList } = require("../linked-lists");
+const { SinglyLinkedList } = require("./linked-lists");
 
 class Stack {
   constructor () {

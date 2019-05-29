@@ -1,4 +1,4 @@
-const { DoublyLinkedList } = require("../linked-lists");
+const { DoublyLinkedList } = require("./linked-lists");
 
 class Queue {
   constructor () {
