@@ -7,3 +7,5 @@ class MaxHeap extends BinaryTree {
   }
 
 }
+
+module.exports = MaxHeap;

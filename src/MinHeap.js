@@ -7,3 +7,5 @@ class MinHeap extends BinaryTree {
   }
 
 }
+
+module.exports = MinHeap;
