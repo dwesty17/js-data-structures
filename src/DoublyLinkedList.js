@@ -1,6 +1,7 @@
 // TODO are addFirst and addLast better method names? (I think they are)
 // TODO use scratch pad to document how code can be used
 class DoublyLinkedList {
+
   constructor () {
     this.head = null;
     this.tail = null;
@@ -29,7 +30,7 @@ class DoublyLinkedList {
         this.head = this.head.next;
         this.head.prev = null;
       }
-      return removed.getData();
+      return removed.data;
     }
   }
 
@@ -52,21 +53,20 @@ class DoublyLinkedList {
         this.tail = this.tail.prev;
         this.tail.next = null;
       }
-      return removed.getData();
+      return removed.data;
     }
   }
+
 }
 
 class Node {
+
   constructor (data) {
     this.data = data;
     this.next = null;
     this.prev = null;
   }
 
-  getData () {
-    return this.data;
-  }
 }
 
 module.exports = DoublyLinkedList;

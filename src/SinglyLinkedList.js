@@ -22,7 +22,7 @@ class SinglyLinkedList {
     if (this.head) {
       const removed = this.head;
       this.head = this.head.next;
-      return removed.getData();
+      return removed.data;
     }
   }
 }
@@ -31,10 +31,6 @@ class Node {
   constructor (data) {
     this.data = data;
     this.next = null;
-  }
-
-  getData () {
-    return this.data;
   }
 }
 

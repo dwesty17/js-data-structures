@@ -36,22 +36,22 @@ describe("SinglyLinkedList", () => {
 
     test("does nothing if there are zero arguments", () => {
       list.add();
-      expect(list.head.getData()).toBe(10);
+      expect(list.head.data).toBe(10);
       expect(list.head.next).toBeNull();
     });
 
     test("accepts a single argument and adds it to the front of the list", () => {
       list.add(20);
-      expect(list.head.getData()).toBe(20);
-      expect(list.head.next.getData()).toBe(10);
+      expect(list.head.data).toBe(20);
+      expect(list.head.next.data).toBe(10);
       expect(list.head.next.next).toBeNull();
     });
 
     test("accepts multiple arguments and adds them to the front of the list", () => {
       list.add(30, 20);
-      expect(list.head.getData()).toBe(30);
-      expect(list.head.next.getData()).toBe(20);
-      expect(list.head.next.next.getData()).toBe(10);
+      expect(list.head.data).toBe(30);
+      expect(list.head.next.data).toBe(20);
+      expect(list.head.next.next.data).toBe(10);
       expect(list.head.next.next.next).toBeNull();
     });
   });
@@ -70,7 +70,7 @@ describe("SinglyLinkedList", () => {
       list.add(10, 20);
 
       list.remove();
-      expect(list.head.getData()).toBe(20);
+      expect(list.head.data).toBe(20);
 
       list.remove();
       expect(list.head).toBeNull();
