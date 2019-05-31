@@ -5,21 +5,21 @@ class BinaryTree {
   }
 
   inOrderTraverse (callback, node = this.root) {
-    callback(node);
-    node.leftChild && this.inOrderTraverse(callback, this.root.leftChild);
-    node.rightChild && this.inOrderTraverse(callback, this.root.rightChild);
+    node.leftChild && this.inOrderTraverse(callback, node.leftChild);
+    callback(node.data);
+    node.rightChild && this.inOrderTraverse(callback, node.rightChild);
   }
 
   preOrderTraverse (callback, node = this.root) {
-    callback(node);
-    node.leftChild && this.preOrderTraverse(callback, this.root.leftChild);
-    node.rightChild && this.preOrderTraverse(callback, this.root.rightChild);
+    callback(node.data);
+    node.leftChild && this.preOrderTraverse(callback, node.leftChild);
+    node.rightChild && this.preOrderTraverse(callback, node.rightChild);
   }
 
   postOrderTraverse (callback, node = this.root) {
-    node.leftChild && this.postOrderTraverse(callback, this.root.leftChild);
-    node.rightChild && this.postOrderTraverse(callback, this.root.rightChild);
-    callback(node);
+    node.leftChild && this.postOrderTraverse(callback, node.leftChild);
+    node.rightChild && this.postOrderTraverse(callback, node.rightChild);
+    callback(node.data);
   }
 
 }
