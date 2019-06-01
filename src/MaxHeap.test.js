@@ -1,5 +1,4 @@
 const MaxHeap = require("./MaxHeap");
-const BinaryTreeNode = require("./BinaryTreeNode");
 
 describe("MaxHeap", () => {
 
@@ -14,11 +13,11 @@ describe("MaxHeap", () => {
   });
 
   test("extract returns the maximum element", () => {
-    maxHeap.insert(new BinaryTreeNode(3));
-    maxHeap.insert(new BinaryTreeNode(4));
-    maxHeap.insert(new BinaryTreeNode(1));
-    maxHeap.insert(new BinaryTreeNode(5));
-    maxHeap.insert(new BinaryTreeNode(2));
+    maxHeap.insert(3);
+    maxHeap.insert(4);
+    maxHeap.insert(1);
+    maxHeap.insert(5);
+    maxHeap.insert(2);
 
     expect(maxHeap.extract()).toBe(5);
     expect(maxHeap.extract()).toBe(4);

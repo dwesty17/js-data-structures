@@ -1,5 +1,4 @@
 const MinHeap = require("./MinHeap");
-const BinaryTreeNode = require("./BinaryTreeNode");
 
 describe("MinHeap", () => {
 
@@ -14,11 +13,11 @@ describe("MinHeap", () => {
   });
 
   test("extract returns the minimum element", () => {
-    minHeap.insert(new BinaryTreeNode(3));
-    minHeap.insert(new BinaryTreeNode(4));
-    minHeap.insert(new BinaryTreeNode(1));
-    minHeap.insert(new BinaryTreeNode(5));
-    minHeap.insert(new BinaryTreeNode(2));
+    minHeap.insert(3);
+    minHeap.insert(4);
+    minHeap.insert(1);
+    minHeap.insert(5);
+    minHeap.insert(2);
 
     expect(minHeap.extract()).toBe(1);
     expect(minHeap.extract()).toBe(2);
