@@ -17,26 +17,23 @@ for notes on how to deploy the project on a live system.
 #### Clone & cd into project
 
 ```
-git clone https://github.com/dwesty17/js-data-structures.git
-cd js-data-structures
+$ git clone https://github.com/dwesty17/js-data-structures.git
+$ cd js-data-structures
 ```
 
 #### Install dependencies
 
 ```
-npm install
+$ npm install
 ```
 
 ### Running the tests
 
 ```
-npm run test
+$ npm run test
 ```
 
 ## Usage
-
-Just include the data structure you're interested in using into your 
-project and use it for whatever you need.
 
 ```javascript
 const { MinHeap } = require("js-data-structures");
@@ -47,7 +44,9 @@ minHeap.insert(2);
 minHeap.insert(3);
 minHeap.insert(1);
 
-console.log(minHeap.extract());
+console.log(minHeap.extract()); // 1
+console.log(minHeap.extract()); // 2
+console.log(minHeap.extract()); // 3
 ```
 
 ## Contributing
