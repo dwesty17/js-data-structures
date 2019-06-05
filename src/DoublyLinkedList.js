@@ -14,9 +14,14 @@ class DoublyLinkedList {
   addFront () {
     [...arguments].reverse().forEach((data) => {
       const newNode = new Node(data);
-      this.head.prev = newNode;
       newNode.next = this.head;
       this.head = newNode;
+
+      if (this.head.next) {
+        this.head.next.prev = this.head;
+      } else {
+        this.tail = this.head;
+      }
     });
   }
 
@@ -37,9 +42,14 @@ class DoublyLinkedList {
   addBack () {
     [...arguments].forEach((data) => {
       const newNode = new Node(data);
-      this.tail.next = newNode;
       newNode.prev = this.tail;
       this.tail = newNode;
+
+      if (this.tail.prev) {
+        this.tail.prev.next = this.tail;
+      } else {
+        this.head = this.tail;
+      }
     });
   }
 

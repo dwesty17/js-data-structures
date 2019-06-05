@@ -52,7 +52,7 @@ describe("DoublyLinkedList", () => {
     });
 
     test("accepts multiple arguments and adds them to the front of the list", () => {
-      list.add(30, 20);
+      list.addFront(30, 20);
       expect(list.head.data).toBe(30);
       expect(list.head.next.data).toBe(20);
       expect(list.head.next.next.data).toBe(10);
@@ -62,69 +62,69 @@ describe("DoublyLinkedList", () => {
 
   describe("removeFront", () => {
     test("does nothing if list is empty", () => {
-      expect(list.remove()).toBeUndefined();
+      expect(list.removeFront()).toBeUndefined();
     });
 
     test("removes the current head if it isn't null", () => {
-      list.add(10);
-      expect(list.remove()).toBe(10);
+      list.addFront(10);
+      expect(list.removeFront()).toBe(10);
     });
 
     test("updates list to point to the new head", () => {
-      list.add(10, 20);
+      list.addFront(10, 20);
 
-      list.remove();
+      list.removeFront();
       expect(list.head.data).toBe(20);
 
-      list.remove();
+      list.removeFront();
       expect(list.head).toBeNull();
     });
   });
 
   describe("addBack", () => {
     beforeEach(() => {
-      list.add(10);
+      list.addBack(10);
     });
 
     test("does nothing if there are zero arguments", () => {
-      list.add();
+      list.addBack();
       expect(list.head.data).toBe(10);
       expect(list.head.next).toBeNull();
     });
 
     test("accepts a single argument and adds it to the front of the list", () => {
-      list.add(20);
-      expect(list.head.data).toBe(20);
-      expect(list.head.next.data).toBe(10);
-      expect(list.head.next.next).toBeNull();
+      list.addBack(20);
+      expect(list.tail.data).toBe(20);
+      expect(list.tail.prev.data).toBe(10);
+      expect(list.tail.prev.prev).toBeNull();
     });
 
     test("accepts multiple arguments and adds them to the front of the list", () => {
-      list.add(30, 20);
-      expect(list.head.data).toBe(30);
-      expect(list.head.next.data).toBe(20);
-      expect(list.head.next.next.data).toBe(10);
-      expect(list.head.next.next.next).toBeNull();
+      list.addBack(20, 30);
+      expect(list.tail.data).toBe(30);
+      expect(list.tail.prev.data).toBe(20);
+      expect(list.tail.prev.prev.data).toBe(10);
+      expect(list.tail.prev.prev.prev).toBeNull();
     });
   });
 
   describe("removeBack", () => {
     test("does nothing if list is empty", () => {
-      expect(list.remove()).toBeUndefined();
+      expect(list.removeBack()).toBeUndefined();
     });
 
     test("removes the current head if it isn't null", () => {
-      list.add(10);
-      expect(list.remove()).toBe(10);
+      list.addBack(10);
+      expect(list.removeBack()).toBe(10);
     });
 
     test("updates list to point to the new head", () => {
-      list.add(10, 20);
+      list.addBack(10, 20);
 
-      list.remove();
-      expect(list.head.data).toBe(20);
+      list.removeBack();
+      expect(list.head.data).toBe(10);
 
-      list.remove();
+      list.removeBack();
       expect(list.head).toBeNull();
     });
   });
