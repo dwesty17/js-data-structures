@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "eslint": "5.16.0",
     "jest": "24.1.0"
   },
   "author": "Dylan Westerhold"
