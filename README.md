@@ -49,14 +49,6 @@ console.log(minHeap.extract()); // 2
 console.log(minHeap.extract()); // 3
 ```
 
-## Contributing
-
-TODO
-
-## Versioning
-
-TODO
-
 ## License
 
 This project is licensed under the MIT License.
